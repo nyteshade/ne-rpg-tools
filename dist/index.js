@@ -69,6 +69,48 @@ Object.defineProperty(exports, "ObjectPath", {
     return _objectPath.ObjectPath;
   }
 });
+Object.defineProperty(exports, "Random", {
+  enumerable: true,
+  get: function get() {
+    return _weightedRandoms.Random;
+  }
+});
+Object.defineProperty(exports, "isNumber", {
+  enumerable: true,
+  get: function get() {
+    return _weightedRandoms.isNumber;
+  }
+});
+Object.defineProperty(exports, "numericSort", {
+  enumerable: true,
+  get: function get() {
+    return _weightedRandoms.numericSort;
+  }
+});
+Object.defineProperty(exports, "STD_WEIGHT", {
+  enumerable: true,
+  get: function get() {
+    return _weightedRandoms.STD_WEIGHT;
+  }
+});
+Object.defineProperty(exports, "DEF_STD_WEIGHT", {
+  enumerable: true,
+  get: function get() {
+    return _weightedRandoms.DEF_STD_WEIGHT;
+  }
+});
+Object.defineProperty(exports, "GEN_RANGE", {
+  enumerable: true,
+  get: function get() {
+    return _weightedRandoms.GEN_RANGE;
+  }
+});
+Object.defineProperty(exports, "GEN_RANGE_VALS", {
+  enumerable: true,
+  get: function get() {
+    return _weightedRandoms.GEN_RANGE_VALS;
+  }
+});
 
 var _fnOrVal = require("./fnOrVal");
 
@@ -79,5 +121,7 @@ var _matcher = require("./matcher");
 var _modifier = require("./modifier");
 
 var _objectPath = require("./object-path");
+
+var _weightedRandoms = require("weighted-randoms");
 
 require('./signature');

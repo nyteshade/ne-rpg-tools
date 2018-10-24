@@ -1,7 +1,7 @@
 {
-  "name": "nen-core",
+  "name": "ne-rpg-tools",
   "version": "1.0.0",
-  "description": "Nyteshade Enterprises NodeJS - Core Library",
+  "description": "Nyteshade Enterprises Pen and Paper RPG Tools",
   "main": "dist/index.js",
   "scripts": {
     "test": "jest",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nyteshade/nen-core.git"
+    "url": "git+https://github.com/nyteshade/ne-rpg-tools.git"
   },
   "keywords": [
     "nodejs",
@@ -19,9 +19,9 @@
   "author": "Brielle Harrison",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/nyteshade/nen-core/issues"
+    "url": "https://github.com/nyteshade/ne-rpg-tools/issues"
   },
-  "homepage": "https://github.com/nyteshade/nen-core#readme",
+  "homepage": "https://github.com/nyteshade/ne-rpg-tools#readme",
   "devDependencies": {
     "@babel/cli": "^7.0.0",
     "@babel/core": "^7.1.2",
