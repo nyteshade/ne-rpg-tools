@@ -1,6 +1,6 @@
 {
   "name": "ne-rpg-tools",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Nyteshade Enterprises Pen and Paper RPG Tools",
   "main": "dist/index.js",
   "scripts": {
