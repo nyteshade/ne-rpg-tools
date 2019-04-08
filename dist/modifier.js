@@ -5,7 +5,7 @@ var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefau
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = exports.Modifier = exports.Operation = void 0;
+exports["default"] = exports.Modifier = exports.Operation = void 0;
 
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
 
@@ -27,7 +27,7 @@ var Modifier =
 function () {
   function Modifier(desc, amount, matcher, objectPath) {
     var operation = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : Operation.ADDITION;
-    (0, _classCallCheck2.default)(this, Modifier);
+    (0, _classCallCheck2["default"])(this, Modifier);
 
     if (arguments.length === 1 && arguments[0] instanceof Object) {
       Object.assign(this, arguments[0]);
@@ -44,7 +44,7 @@ function () {
     }
   }
 
-  (0, _createClass2.default)(Modifier, [{
+  (0, _createClass2["default"])(Modifier, [{
     key: "applyTo",
     value: function applyTo(object) {
       var _this = this;
@@ -97,4 +97,4 @@ function () {
 
 exports.Modifier = Modifier;
 var _default = Modifier;
-exports.default = _default;
+exports["default"] = _default;

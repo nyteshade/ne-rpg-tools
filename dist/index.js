@@ -21,6 +21,12 @@ Object.defineProperty(exports, "createEnum", {
     return _enumeration.createEnum;
   }
 });
+Object.defineProperty(exports, "DataNumber", {
+  enumerable: true,
+  get: function get() {
+    return _enumeration.DataNumber;
+  }
+});
 Object.defineProperty(exports, "Matches", {
   enumerable: true,
   get: function get() {

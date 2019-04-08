@@ -5,7 +5,7 @@ var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefau
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = exports.ObjectPath = exports.compress = exports.expand = exports.getVal = void 0;
+exports["default"] = exports.ObjectPath = exports.compress = exports.expand = exports.getVal = void 0;
 
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
 
@@ -96,8 +96,8 @@ function () {
    * value
    */
   function ObjectPath(pathToProp, object) {
-    (0, _classCallCheck2.default)(this, ObjectPath);
-    (0, _defineProperty2.default)(this, "path", void 0);
+    (0, _classCallCheck2["default"])(this, ObjectPath);
+    (0, _defineProperty2["default"])(this, "path", void 0);
     this.path = pathToProp;
 
     if (object) {
@@ -114,7 +114,7 @@ function () {
    */
 
 
-  (0, _createClass2.default)(ObjectPath, [{
+  (0, _createClass2["default"])(ObjectPath, [{
     key: "get",
     value: function get(object) {
       if (!this.path) {
@@ -318,7 +318,7 @@ function () {
   }, {
     key: "INVALID_PROPERTY",
     get: function get() {
-      return Symbol.for("[".concat(this.name, "]: Path appears invalid"));
+      return Symbol["for"]("[".concat(this.name, "]: Path appears invalid"));
     }
     /** 
      * A `string` that represents the path used to access the value
@@ -331,4 +331,4 @@ function () {
 
 exports.ObjectPath = ObjectPath;
 var _default = ObjectPath;
-exports.default = _default;
+exports["default"] = _default;

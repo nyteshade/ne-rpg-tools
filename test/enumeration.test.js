@@ -1,4 +1,4 @@
-import { createMutableEnum, createEnum } from '../src'
+import { createMutableEnum, createEnum, DataNumber } from '../src'
 
 describe('testing mutable enumerations', () => {
  const redData = { red: 255 }
@@ -12,13 +12,19 @@ describe('testing mutable enumerations', () => {
   )
 
   it('should bi-directionally map', () => {
-    expect(COLORS.RED).toBe(0)
+    expect(COLORS.RED).not.toBe(0)
+    expect(COLORS.RED == 0).toBeTruthy()
+    expect(COLORS.RED === 0).toBeFalsy()
     expect(COLORS[COLORS.RED]).toBe('RED')
 
-    expect(COLORS.GREEN).toBe(1)
+    expect(COLORS.GREEN).not.toBe(1)
+    expect(COLORS.GREEN == 1).toBeTruthy()
+    expect(COLORS.GREEN === 1).toBeFalsy()
     expect(COLORS[COLORS.GREEN]).toBe('GREEN')
 
-    expect(COLORS.BLUE).toBe(2)
+    expect(COLORS.BLUE).not.toBe(2)
+    expect(COLORS.BLUE == 2).toBeTruthy()
+    expect(COLORS.BLUE === 2).toBeFalsy()
     expect(COLORS[COLORS.BLUE]).toBe('BLUE')
   })
 
@@ -60,5 +66,31 @@ describe('testing mutable enumerations', () => {
       expect(COLORS.test).toBe(undefined)
       expect(delete COLORS.RED).toBe(false)
     }).toThrow()
+  })
+})
+
+describe('test DataNumber integration', () => {
+  const d = new DataNumber(1, { prop: 'Value' })
+
+  it('should be usable as a number', () => {
+    let array = ['a', 'b', 'c']
+
+    expect(array[d]).toBe('b')
+    expect(d + 3).toBe(4)
+    expect(d == 1).toBeTruthy()
+  })
+
+  it('data should be accessible via a dot operator', () => {
+    expect(d.prop).toEqual('Value')
+  })
+
+  it('data should be extendable', () => {
+    d.secondProp = true
+
+    expect(d.secondProp).toBeTruthy()
+  })
+
+  it('should have data accessible via the symbol', () => {
+    expect(d[DataNumber.DATA].prop).toEqual('Value')
   })
 })

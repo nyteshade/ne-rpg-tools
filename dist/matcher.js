@@ -5,7 +5,7 @@ var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefau
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = exports.Matcher = exports.Matches = void 0;
+exports["default"] = exports.Matcher = exports.Matches = void 0;
 
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
 
@@ -65,9 +65,9 @@ function () {
    */
   function Matcher(pattern) {
     var matchingBehavior = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : Matches.MATCH_MANY;
-    (0, _classCallCheck2.default)(this, Matcher);
-    (0, _defineProperty2.default)(this, "pattern", void 0);
-    (0, _defineProperty2.default)(this, "prefs", void 0);
+    (0, _classCallCheck2["default"])(this, Matcher);
+    (0, _defineProperty2["default"])(this, "pattern", void 0);
+    (0, _defineProperty2["default"])(this, "prefs", void 0);
     this.pattern = pattern;
     this.prefs = matchingBehavior;
   }
@@ -93,7 +93,7 @@ function () {
    */
 
 
-  (0, _createClass2.default)(Matcher, [{
+  (0, _createClass2["default"])(Matcher, [{
     key: "match",
     value: function match(target) {
       for (var _len = arguments.length, args = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
@@ -256,7 +256,7 @@ function () {
 
               var valIsRegExp = isRegExp(value);
 
-              if ((0, _deepEqual.default)(target, value) || valIsRegExp && value.test(target) || target.valueOf() === value.valueOf()) {
+              if ((0, _deepEqual["default"])(target, value) || valIsRegExp && value.test(target) || target.valueOf() === value.valueOf()) {
                 if (this.prefs === Matches.MATCH_ANY) {
                   return [target];
                 }
@@ -269,8 +269,8 @@ function () {
             _iteratorError2 = err;
           } finally {
             try {
-              if (!_iteratorNormalCompletion2 && _iterator2.return != null) {
-                _iterator2.return();
+              if (!_iteratorNormalCompletion2 && _iterator2["return"] != null) {
+                _iterator2["return"]();
               }
             } finally {
               if (_didIteratorError2) {
@@ -284,8 +284,8 @@ function () {
         _iteratorError = err;
       } finally {
         try {
-          if (!_iteratorNormalCompletion && _iterator.return != null) {
-            _iterator.return();
+          if (!_iteratorNormalCompletion && _iterator["return"] != null) {
+            _iterator["return"]();
           }
         } finally {
           if (_didIteratorError) {
@@ -441,4 +441,4 @@ function () {
 
 exports.Matcher = Matcher;
 var _default = Matcher;
-exports.default = _default;
+exports["default"] = _default;
